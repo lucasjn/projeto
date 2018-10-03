@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{38FBB6B1-4F9F-44BA-A6E3-2D95979ED9AB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>OdontoSIS</RootNamespace>
+    <AssemblyName>OdontoSIS</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Conexao\DB.cs" />
+    <Compile Include="CRUD\Create.cs" />
+    <Compile Include="CRUD\Delete.cs" />
+    <Compile Include="CRUD\Read.cs" />
+    <Compile Include="CRUD\Update.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include=".Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Janelas\Aplicativo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Janelas\Aplicativo.Designer.cs">
+      <DependentUpon>Aplicativo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Janelas\BackupDeBanco.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Janelas\BackupDeBanco.Designer.cs">
+      <DependentUpon>BackupDeBanco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Janelas\Clientes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Janelas\Clientes.Designer.cs">
+      <DependentUpon>Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Janelas\Desenvolvedores.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Janelas\Desenvolvedores.Designer.cs">
+      <DependentUpon>Desenvolvedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Janelas\Fornecedor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Janelas\Fornecedor.Designer.cs">
+      <DependentUpon>Fornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Janelas\Localizar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Janelas\Localizar.Designer.cs">
+      <DependentUpon>Localizar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Janelas\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Janelas\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Janelas\Lote.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Janelas\Lote.Designer.cs">
+      <DependentUpon>Lote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Janelas\LotesVencidos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Janelas\LotesVencidos.Designer.cs">
+      <DependentUpon>LotesVencidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Janelas\AnaliseDevolucao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Janelas\AnaliseDevolucao.Designer.cs">
+      <DependentUpon>AnaliseDevolucao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Janelas\NovoCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Janelas\NovoCliente.Designer.cs">
+      <DependentUpon>NovoCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Janelas\NovoDente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Janelas\NovoDente.Designer.cs">
+      <DependentUpon>NovoDente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Janelas\NovoDevolucao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Janelas\NovoDevolucao.Designer.cs">
+      <DependentUpon>NovoDevolucao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Janelas\NovoEmprestimo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Janelas\NovoEmprestimo.Designer.cs">
+      <DependentUpon>NovoEmprestimo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Janelas\NovoFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Janelas\NovoFornecedor.Designer.cs">
+      <DependentUpon>NovoFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Janelas\NovoLote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Janelas\NovoLote.Designer.cs">
+      <DependentUpon>NovoLote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Janelas\Pesquisa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Janelas\Pesquisa.Designer.cs">
+      <DependentUpon>Pesquisa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Janelas\RecuperarBanco.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Janelas\RecuperarBanco.Designer.cs">
+      <DependentUpon>RecuperarBanco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Janelas\StatusEmprestimo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Janelas\StatusEmprestimo.Designer.cs">
+      <DependentUpon>StatusEmprestimo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menus\Auditoria.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Menus\Auditoria.Designer.cs">
+      <DependentUpon>Auditoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menus\Cadastro.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Menus\Cadastro.Designer.cs">
+      <DependentUpon>Cadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menus\Configuração.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Menus\Configuração.Designer.cs">
+      <DependentUpon>Configuração.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menus\Devolucao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Menus\Devolucao.Designer.cs">
+      <DependentUpon>Devolucao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menus\Emprestimo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Menus\Emprestimo.Designer.cs">
+      <DependentUpon>Emprestimo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menus\Sobre.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Menus\Sobre.Designer.cs">
+      <DependentUpon>Sobre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Dente.cs" />
+    <Compile Include="Models\Cliente.cs" />
+    <Compile Include="Models\Fornecedores.cs" />
+    <Compile Include="Models\Model.cs" />
+    <Compile Include="Models\Usuario.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sessao.cs" />
+    <EmbeddedResource Include=".Designer.resx">
+      <DependentUpon>.Designer.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Janelas\Aplicativo.resx">
+      <DependentUpon>Aplicativo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Janelas\BackupDeBanco.resx">
+      <DependentUpon>BackupDeBanco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Janelas\Clientes.resx">
+      <DependentUpon>Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Janelas\Desenvolvedores.resx">
+      <DependentUpon>Desenvolvedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Janelas\Fornecedor.resx">
+      <DependentUpon>Fornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Janelas\Localizar.resx">
+      <DependentUpon>Localizar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Janelas\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Janelas\Lote.resx">
+      <DependentUpon>Lote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Janelas\LotesVencidos.resx">
+      <DependentUpon>LotesVencidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Janelas\AnaliseDevolucao.resx">
+      <DependentUpon>AnaliseDevolucao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Janelas\NovoCliente.resx">
+      <DependentUpon>NovoCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Janelas\NovoDente.resx">
+      <DependentUpon>NovoDente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Janelas\NovoDevolucao.resx">
+      <DependentUpon>NovoDevolucao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Janelas\NovoEmprestimo.resx">
+      <DependentUpon>NovoEmprestimo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Janelas\NovoFornecedor.resx">
+      <DependentUpon>NovoFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Janelas\NovoLote.resx">
+      <DependentUpon>NovoLote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Janelas\Pesquisa.resx">
+      <DependentUpon>Pesquisa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Janelas\RecuperarBanco.resx">
+      <DependentUpon>RecuperarBanco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Janelas\StatusEmprestimo.resx">
+      <DependentUpon>StatusEmprestimo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menus\Auditoria.resx">
+      <DependentUpon>Auditoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menus\Cadastro.resx">
+      <DependentUpon>Cadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menus\Configuração.resx">
+      <DependentUpon>Configuração.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menus\Devolucao.resx">
+      <DependentUpon>Devolucao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menus\Emprestimo.resx">
+      <DependentUpon>Emprestimo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menus\Sobre.resx">
+      <DependentUpon>Sobre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-arquivo-de-fichas-filled-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-arquivo-de-fichas-filled-50 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-dente-filled-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-dente-filled-50 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-auditoria-filled-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-serviços-filled-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-sobre-filled-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-usuário-filled-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-inscrição-de-estudante-filled-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-inscrição-de-estudante-filled-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-etiqueta-de-preço-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-fornecedor-filled-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-dente-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-dente-filled-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-dente-filled-100 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-calendário-filled-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-banco-de-dados-filled-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-backup-de-banco-de-dados-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-sincronizar-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-desenvolvedor-filled-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-sobre-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\princ.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
